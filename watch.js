@@ -12,9 +12,15 @@ var tw = rem.load('twitter', 1.0).prompt();
 rem.console(tw, function (err, user) {
 
   // Pass the statuses/sample stream to a JSON parser and print only the tweets.
-  user.stream('statuses/filter').post({
-    track: process.argv.slice(2)
-  }, function (err, stream) {
+  if (process.argv.length < 3) {
+    user.stream('statuses/sample').get(printStream);
+  } else {
+    user.stream('statuses/filter').post({
+      track: process.argv.slice(2)
+    }, printStream);
+  }
+
+  function printStream (err, stream) {
     stream.pipe(clarinet.createStream()).on('key', function (key) {
       if (key == 'text') {
         this.once('value', function (tweet) {
@@ -22,5 +28,5 @@ rem.console(tw, function (err, user) {
         })
       }
     });
-  });
+  }
 });

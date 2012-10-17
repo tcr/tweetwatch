@@ -1,6 +1,6 @@
 {
   "name": "tweetwatch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Watch tweet stream live.",
   "main": "watch.js",
   "bin": {
