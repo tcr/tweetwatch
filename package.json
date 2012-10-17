@@ -1,0 +1,18 @@
+{
+  "name": "tweetwatch",
+  "version": "0.0.1",
+  "description": "Watch tweet stream live.",
+  "main": "watch.js",
+  "bin": {
+    "tweetwatch": "./watch.js"
+  },
+  "dependencies": {
+    "clarinet": "~0.7.0",
+    "read": "~1.0.4",
+    "rem": "~0.5.7"
+  },
+  "devDependencies": {},
+  "repository": "",
+  "author": "",
+  "license": "BSD"
+}
