@@ -6,10 +6,7 @@ var read = require('read');
 var clarinet = require('clarinet');
 
 // Create Twitter API, prompting for key/secret.
-var tw = rem.load('twitter', 1.0).prompt();
-
-// Authenticate user via the console.
-rem.console(tw, function (err, user) {
+rem.connect('twitter.com', '*').prompt(function (err, user) {
 
   // Pass the statuses/sample stream to a JSON parser and print only the tweets.
   if (process.argv.length < 3) {

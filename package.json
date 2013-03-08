@@ -9,7 +9,7 @@
   "dependencies": {
     "clarinet": "~0.7.0",
     "read": "~1.0.4",
-    "rem": "~0.5.7"
+    "rem": "~0.6.2-1"
   },
   "devDependencies": {},
   "repository": "",
